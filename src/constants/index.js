@@ -86,7 +86,7 @@ export const workExperiences = [
     duration: 'May 2025 – Jul 2025',
     title:
       'Developed multi-layer neural networks for pattern space segmentation and image classification. Planned and executed project using Agile methods with Gantt-based task scheduling and sprint cycles. Presented findings through midterm demos and co-authored a 10-page technical report.',
-    icon: '/assets/university.svg',
+    icon: '/assets/framer.svg',
     animation: 'victory',
   },
   {
@@ -96,7 +96,7 @@ export const workExperiences = [
     duration: 'Dec 2023 – Feb 2024',
     title:
       'Developed and launched 2+ mobile apps using Ionic and Angular, impacting 500+ users. Optimized performance by reducing load time by 25% and integrated key web features into the mobile app, improving user engagement by 30%.',
-    icon: '/assets/government.svg',
+    icon: '/assets/figma.svg',
     animation: 'clapping',
   },
   {
@@ -106,7 +106,18 @@ export const workExperiences = [
     duration: 'Aug 2023 – Aug 2025',
     title:
       'Organized 15+ team meetings, increasing productivity by 20%. Conducted 10+ workshops, reaching 300+ students and faculty to promote open-source technologies and web development skills.',
-    icon: '/assets/mozilla.svg',
+    icon: '/assets/notion.svg',
     animation: 'salute',
   },
 ];
+
+export const calculateSizes = (isSmall, isMobile, isTablet) => {
+  return {
+    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
+    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
+    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
+    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
+    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+  };
+};
